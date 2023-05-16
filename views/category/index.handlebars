@@ -1,0 +1,14 @@
+<h3 class="mt-5 m-3 text-center fw-bold">Categories: </h3>
+
+
+{{#each category}}
+
+<div class="container card mt-3 w-25" id="category">
+   <a href="/categories/{{slug}}"><h4 class="m-3 text-black ">{{name}}</h4></a>
+</div>
+
+{{else}}
+
+{{/each}}
+
+<a href="/category/add" class="btn btn-warning mx-2" style="margin-top:-350px; float:right">Add category</a>

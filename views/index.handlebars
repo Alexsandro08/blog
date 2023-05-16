@@ -1,0 +1,41 @@
+
+    
+
+
+
+    
+       <div class="container text-white p-5 rounded my-4" id="div">
+
+        <h1>Welcome ! <img src="../img/gif.gif" class="mb-3" style="width: 55px;" ></h1><br>
+        <p>Welcome to the world of blogging! It's a pleasure to have you here and we're excited to see what you have to share with the world.</p>
+
+        <hr/>
+
+        <p>Blogging is a wonderful way to express yourself, connect with others, and build a community around your interests and passions. We wish you all the best on your blogging journey and can't wait to see the amazing content you create!</p>
+
+        <a href="/register" class="btn btn-warning">Register here</a>
+      </div>
+
+   <div class="container mt-5">
+          <h3>Recent posts:</h3>
+      </div>
+
+{{#each posts}}
+   
+      <div class="container card mt-5 w-75" id="posts">
+            <div class="card-body">
+                
+                <h3>{{title}}</h3><br>
+                <p>{{describe}}</p>
+                <a href="/posts/{{slug}}" class="btn btn-warning">See post</a>
+                <hr>
+                <small><strong>Category</strong>: {{category.name}}</small><br>
+                <small><strong>Date post</strong>: {{date}}</small>
+            </div>
+      </div>
+
+{{else}}
+    <h4>No posts</h4>
+{{/each}}
+
+

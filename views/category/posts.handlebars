@@ -1,0 +1,21 @@
+
+
+
+{{#each posts}}
+   
+      <div class="container card mt-3">
+            <div class="card-body" >
+                
+                <h3>{{title}}</h3>
+                <p>{{describe}}</p>
+                <a href="/posts/{{slug}}" class="btn btn-warning mt-3">See post</a>
+                <hr>
+    
+                <small><strong>Date post</strong>: {{date}}</small>
+            </div>
+      </div>
+
+{{else}}
+    <h3 class="m-3">No posts</h3>
+{{/each}}
+

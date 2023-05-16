@@ -1,0 +1,40 @@
+{{#each erros}}
+        <div class="alert alert-danger container w-25">{{texto}}</div>
+{{else}}
+
+{{/each}}
+
+
+<div class="card container mt-5" id="regiUser">
+
+    <div class="card-body">
+        <form action="/register" method="post">
+        <div class="input-group mt-5">
+          <span class="input-group-text ">Name</span>
+          <input type="text" name="name" id="iname" class="form-control " required>
+        </div>
+
+        <div class="input-group mt-3">
+             <span class="input-group-text">Email</span>
+             <input type="email" name="email" id="mail" class="form-control" required>
+         </div>
+
+            <div class="input-group mt-3">
+                <span class="input-group-text">password</span>
+                <input type="password" name="password" id="ipassword" class="form-control" required>
+            </div>
+
+            <div class="input-group mt-3">
+                <span class="input-group-text">Repeat password</span>
+                <input type="password" name="password2" id="ipassword2" class="form-control" required>
+            </div><br>
+
+            <input type="submit" value="Create registration" class="btn btn-warning" style="float:right">
+
+
+        </form>
+
+    </div>
+
+</div>
+

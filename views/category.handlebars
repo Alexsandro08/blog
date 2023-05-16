@@ -1,0 +1,28 @@
+<h1 class="header mt-5 m-3">Category</h1>
+<hr/>
+
+
+  <a href="/category/add" class="btn btn-warning m-2" >To add category</a>
+  
+  <a href="/posts/add" class="btn btn-warning" >To add post</a>
+  
+  <a href="/posts" class="btn btn-warning m-2" >Post list</a>
+
+
+{{#each category}}
+
+    <div class="card mt-5 container w-75">
+       <div class="card-body ">
+          <h4>{{name}}</h4>
+          <small>Slug: {{slug}}</small>
+          <a href="/category/edit/:{{dataValues.id}}" class="btn btn-warning m-4">Edit category</a>
+          <form action="/category/del" method="post">
+            <input type="hidden" name="id" value="{{_id}}">
+            <button type="submit" class="btn btn-danger" id="delCategory">Delete</button>
+          </form>
+        </div>
+    </div>
+
+{{else}}
+    <h4 class="m-3 text-secondary">No category</h4>
+{{/each}}

@@ -1,0 +1,27 @@
+<h1 class="header mt-5 m-3">List of posts</h1>
+<hr/>
+
+<a href="/posts/add"><button class="btn btn-warning m-3">New post</button></a>
+
+
+{{#each posts}}
+    <div class="container card mt-4" id="pts">
+        <div class="card-body ">
+           <h3>{{title}}</h3> <br>
+           <p>Describe: {{describe}}</p>
+           <small>Date: {{date}}</small><br>
+          <small><strong>Category</strong>: {{category.name}}</small> 
+
+          <a href="/posts/edit/:{{dataValues.id}}" class="btn btn-warning m-3 me-3">Edit post</a>
+
+           <form action="/posts/del" method="post">
+            <input type="hidden" name="id" value="{{_id}}">
+            <button type="submit" class="btn btn-danger" id="del">Delete</button>
+          </form>
+           
+          
+        </div>
+    </div>
+{{else}}
+    <h4 class="m-3 text-secondary">No post</h4>
+{{/each}}
